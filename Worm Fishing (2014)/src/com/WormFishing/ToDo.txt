@@ -1,0 +1,29 @@
+- Once words implemented, make text field so words don't go off button.
+- In Entity Button, make a animation for when it is clicked.
+
+- implement realistic rotation on the Y axis of the bucket. WE PRETTY GOOD HERE.
+
+- Physics that up, make it rotate and gravity drop it. WE GOOD HERE
+- Instead of rotating based on mouse velocity. Rotate based on a constant velocity which is determined by the velocity of the
+mouse. WE GOOD HERE.
+
+-Implement an applied acceleration system to occur on certain frames, so you can just edit the values 
+and it is automatically applied. Makes for a better system, and easier testing.
+
+-Y axis stuffs: 
+	-If upside down, then the angle is Math.PI * 56.
+	-If the y axis acceleration is positive(going down), then apply an acceleration boost to the side
+	that it is on the x axis, and nullify gravity(or counteract it), so you can get fully upside down.WE GOOD HERE.
+	
+	-If the bucket is within a range at the top around Math.PI * 56, then counteract gravity on both sides, so you
+	can keep the bucket in that range. Upon losing the y axis acceleration, slowly add gravity on whatever side
+	it is leaning towards. WE GOOD HERE.
+	
+	-If the y axis acceleration is negative(going up), then add more gravity to whatever x axis side it is on.
+-Now I am able to actually start other things, since the bucket is pretty much done. 
+
+	-Create method for if bucket is upside down, that returns truth values. DONE
+	-Create Method for receiving bucket angles. DONE
+	-create method for returning x and y acceleration values.(Don't return actual values, return a set value 
+	for a range). DONE
+

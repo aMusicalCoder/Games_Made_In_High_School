@@ -1,0 +1,12 @@
+<TextureAtlas imagePath="../res/mainBG.png">
+	<SubTexture name="bg_1" x="0" y="0" width="320" height="480" />
+	<SubTexture name="bg_2" x="320" y="0" width="320" height="480" />
+	<SubTexture name="bg_3" x="640" y="0" width="320" height="480" />
+	<SubTexture name="bg_4" x="960" y="0" width="320" height="480" />
+	<SubTexture name="bg_5" x="1280" y="0" width="320" height="480" />
+	<SubTexture name="bg_6" x="0" y="480" width="320" height="480" />
+	<SubTexture name="bg_7" x="320" y="480" width="320" height="480" />
+	<SubTexture name="bg_8" x="640" y="480" width="320" height="480" />
+	<SubTexture name="bg_9" x="960" y="480" width="320" height="480" />
+	<SubTexture name="bg_10" x="1280" y="480" width="320" height="480" />
+</TextureAtlas>

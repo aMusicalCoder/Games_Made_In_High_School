@@ -1,0 +1,26 @@
+Swipe It Completion List:
+
+Code:
+	-Help Screen.
+		-User Friendly. Teaches Concepts Well.
+Graphics:
+	-Splash Screen Graphics.
+	-Start Menu Background. ( + Animation )
+	-Create a Font.
+	-Button art, button states.
+	-Create a Logo.
+	-Swipe It! Graphic for Title ( Start Menu )
+	-High Score Background. ( Store Room from Factory )
+	-About Screen Background. ( Office Room )
+	-Game Background. ( Factory Floor )
+	-Game Animations. ( Factory Generator Shocks and Wires shocks )
+	-Game Animation for Swipe Rotation. (Very fast rotation, see shadow movement)
+	-Create Intro Animation.
+	-Powerup animations. (Duct Tape visual, Fire Wire, lightning strikes, dark room for power outage)
+Audio:
+	-Compose Menu Music.
+	-Compose Game Music.
+	-Synthesize Menu Music.
+	-Synthesize Game Music.
+	-Create Intro Animation Audio. ( Combo of SFX, Menu Music and Human Noises(Huh?, No!, Aha!) )
+	-Game Sound Effects. (Swipe, Shocks, Game Over)

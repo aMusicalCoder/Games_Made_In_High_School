@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+
+<HTML>
+<head>
+
+</head>
+
+<body>
+<canvas id = "canvas1" width = "240" height = "400"></canvas>
+
+<script type = "text/JavaScript">
+	var screenWidth = 240;
+	var screenHeight = 400;
+	var canvas = document.getElementById("canvas1");
+	var ctx = canvas.getContext("2d");
+	canvas.addEventListener("click", checkInput);
+	
+	//Variables for different screen states, bruh.
+	var startScreen = true;
+	var mainScreen = false;
+	var plantScreen = false;
+	var graphScreen = false;
+	var businessScreen = false;
+	var graphScreen = false;
+	var aboutScreen = false;
+	
+	//Variables for Business numbers.
+	var currentMoney = 0.0;
+	var monthlyIncome = 100.0;
+	var monthlyExpenses = 0.0;
+	var plants = 1;
+	
+	init();
+	
+	//Functions Documentation.
+	//init()
+	//drawMainScreen()
+	//drawStartScreen()
+	//drawAboutScreen()
+	//drawPlantScreen()
+	//createButton(w, h, x, y, text)
+	//isClicked(x1, x2, y1, y2)
+	//clearScreen()
+	//checkInput()
+	
+	
+	function init()
+	{
+		//Load the start screen, and maybe some assets at the start the game.
+		drawStartScreen();
+	}
+	
+	function drawMainScreen()
+	{
+		//Draw Main Screen Buttons.
+		ctx.fillStyle = "#000000";
+		ctx.font = "20px serif";
+		ctx.fillText("Money: " + currentMoney, 75, 30);
+		
+		createButton(50, 30, 50, 50, "Plants");
+		createButton(50, 30, 50, 100, "Market");
+		createButton(50, 30, 105, 50, "Graph");
+		createButton(50, 30, 105, 100, "Business");
+		createButton(105 , 30, 50, 150, "Fast Forward");
+		createButton(30, 25, 25, 20, "Back");
+	}
+	
+	function drawStartScreen()
+	{
+		//Draw Start Screen Buttons.
+		ctx.fillStyle = "#000000";
+		ctx.font = "20px serif";
+		ctx.fillText("Business Simulator...", 50, 50);
+		createButton(50, 30, 100, 100, "Play");
+		createButton(50, 30, 100, 150, "About");
+	}
+	
+	function drawAboutScreen()
+	{
+		//Draw About Screen.
+		createButton(30, 25, 25, 20, "Back");
+		ctx.font = "12px serif";
+		ctx.fillStyle = "#000000";
+		ctx.fillText("Hey I'm Ben. I made this game.\n Enjoy.", 50, 75);
+	}
+	
+	function drawPlantScreen()
+	{
+		//Draw Plant Screen.
+		createButton(30, 25, 25, 20, "Back");
+		createButton(100, 30, 50, 100, "Buy Plant: 200g");
+		ctx.fillStyle = "#000000";
+		ctx.font = "20px serif";
+		ctx.fillText("Money: " + currentMoney, 75, 30);
+		ctx.fillText("Plants: " + plants, 75, 55);
+	}
+	
+	function createButton(w, h, x, y, text)
+	{
+		//Function to visually draw a button for the user to see. 
+		ctx.fillStyle =  "#FF0000";
+		ctx.fillRect(x, y, w, h);
+		ctx.font = "12px serif";
+		ctx.fillStyle = "#000000";
+		ctx.fillText(text, (w / 8) + x, (h/2) + y);
+	}
+	
+	function isClicked(x1, x2, y1, y2)
+	{
+		//Function to determine whether button is being clicked based on coordinate position.
+		var x = event.clientX;
+		var y = event.clientY;
+		
+		//Subtract 10 from each to offset the border that was picking up mouse input. It works now.
+		if((x - 10 > x1 && x - 10 < x2) && 
+			(y - 10 > y1 && y - 10 < y2))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	function clearScreen()
+	{
+		ctx.clearRect(0, 0, screenWidth, screenHeight);
+	}
+	
+	
+	function checkInput()
+	{
+		//On Start Screen.
+		if(startScreen == true)
+		{
+			//Code for if the startScreen is showing. It is by default the first screen.
+			if(isClicked(100, 150, 100, 130) == true)
+			{
+				//If you press play.
+				startScreen = false;
+				mainScreen = true;
+				clearScreen();
+				drawMainScreen();
+			}
+			
+			if(isClicked(100, 150, 150, 180) == true)
+			{
+				//If you Press About.
+				startScreen = false;
+				aboutScreen = true;
+				clearScreen();
+				drawAboutScreen();
+			}
+		}
+		
+		//On Main Screen.
+		if(mainScreen == true)
+		{
+			//Code for if the mainScreen is showing. It is not by default.
+			if(isClicked(25, 55, 20, 45) == true)
+			{
+				//If you press Back.
+				startScreen = true;
+				mainScreen = false;
+				clearScreen();
+				drawStartScreen();
+			}
+			
+			if(isClicked(50, 155, 150, 180) == true)
+			{
+				//If You Press Fast Forward. A lot of calculations will be done here.
+				//Calculate Income.
+				monthlyIncome = (Math.floor((Math.random() * 10) + 1)) * plants;
+				//Calculate Expenses.
+				
+				//Calculate Monay.
+				currentMoney = currentMoney + monthlyIncome - monthlyExpenses;
+				clearScreen();
+				drawMainScreen();
+			}
+			
+			if(isClicked(50, 100, 50, 80) == true)
+			{
+				//If You Click Plants.
+				mainScreen = false;
+				plantScreen = true;
+				clearScreen();
+				drawPlantScreen();
+			}
+			
+		}
+		
+		//On About Screen.
+		if(aboutScreen == true)
+		{
+			if(isClicked(25, 55, 20, 45) == true)
+			{
+				//If you press back.
+				startScreen = true;
+				aboutScreen = false;
+				clearScreen();
+				drawStartScreen();
+			}
+		}
+		
+		if(plantScreen == true)
+		{
+			if(isClicked(25, 55, 20, 45) == true)
+			{
+				//If you press Back.
+				plantScreen = false;
+				mainScreen = true;
+				clearScreen();
+				drawMainScreen();
+			}
+			
+			if(isClicked(50, 150, 100, 130) == true)
+			{
+				//If you press Buy Plant.
+				if(currentMoney > 200)
+				{
+					//If You have the money for a plant.
+					plants = plants + 1;
+					currentMoney = currentMoney - 200;
+					clearScreen();
+					drawPlantScreen();
+				}
+			}
+			
+			
+		}
+		
+	}
+	
+</script>
+
+</body>
+</HTML>

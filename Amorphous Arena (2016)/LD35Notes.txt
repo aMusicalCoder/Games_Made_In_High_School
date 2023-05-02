@@ -1,0 +1,159 @@
+Ludum Dare 35 Notes:
+	-The Theme is SHAPESHIFT.
+	
+Music Listened To:
+	-Elvis Presley - Suspicious Minds.
+	-Pink Floyd - Dark Side of the Moon (Album)
+	-Pink Floyd - Animals (Album)
+	-Monstercat Podcast Ep. 101
+	-Monstercat Podcast Ep. 100
+
+Timeline:
+	Hour 1:(9 PM)
+		-Brainstormed.
+	Hour 2:(10 PM)
+		-Idea Chosen. (Amorphous Arena)
+		-Basic SDL Tester Code. I have stuff being drawn to screen at my will. 
+	Hour 3 - 14:(11 PM & 10 AM)
+		-First Code on Github.
+		-Now I rest.
+	Hour 15:(11 PM)
+		-I slept too much.
+		-Game Loop up and running.
+	Hour 16:(12 PM)
+		-Getting graphics system working.
+	Hour 17 - 18: (1PM - 2PM, 2PM - 3PM)
+		-Coded Main Menu Screen.
+		-Coded Main Menu Screen Behavior.
+	Hour 19: (3PM & 4PM)
+		-Took a break.
+		-Coded About Screen.
+		-Coded Game Menu Screen.
+		-Quick Break. Then Game Code.
+	Hour 20: (4PM)
+		-Took Shower.
+		-Made the map class.
+	Hour 21 - 22:(5PM & 6PM)
+		-Map Renders on Screen.
+		-You can move around the map as well.
+	Hour 23:(7PM)
+		-Break for Dinner & thinking.
+		-Left Wrist is hurting from all the coding.
+	Hour 24:(8PM)
+		-Down and Up Textures.
+		-Unit Type Textures.
+	Hour 25:(9PM)
+		-Dawn of the Final Day!!
+		-Select floor tiles in game now.
+		-Done for the day. Will wake up early this time though.
+	Hour 36 & 37:(8AM & 9AM)
+		-Slept in a little too much again.
+		-I may actually be able to finish. : )
+		-Just Finished Drawing All textures needed for basic game to finish. :D
+		-Serious Code Time... After Breakfast.
+	Hour 38:(10AM)
+		-Coded the UI Menu. except for Blob generation.
+		-Starting Unit Stats.
+	Hour 39 & 40:(11AM & 12AM)
+		-Finished Unit Stats.
+		-Created System for Drawing Units to screen.
+		-Created System for dropping specific units in spawn zones.
+	Hour 41:(1PM)
+		-8 Hours Left (Inclusive Hour Scheduling)
+		-Fonts and Text System Implemented.
+	Hour 42:(2PM)
+		-Blob Generation System Implemented.
+		-Worker system works as well.
+	Hour 43 & 44:(3PM & 4PM)
+		-Movement implemented.
+		-Unselect Button, or just press space.
+		-Break. Starting to get sick from all screen time.
+	Hour 45:(5PM)
+		-only 3 more hours(inclusive)
+		-Attacking System Implemented.
+		-Win condition implemented.
+	Hour 46:(6PM)
+		-All I have to do now is implement enemies, and a losing condition.
+			-Then possibly a little bit of polish.
+		-Took a small break.
+		
+		
+	8:57 PM - DONE!
+Completion List:
+	-Update Makefile for easy edits. CHECK
+	-Draw placeholder graphics to screen. CHECK
+	-Be able to get user input at will. CHECK
+	-Basic UI. In Game Class. Buttons and stuff. CHECK
+	-Code About Menu. CHECK
+	-Code Game Menu. CHECK
+	-Game Code:
+		-Code Map Class CHECK
+		-Draw Map Textures. 40x40 CHECK
+		-Render Map. CHECK
+		-Draw and add Textures for Down and Up map buttons. CHECK
+		-Create and Add Tower Texture. CHECK
+		-Create and Add Textures for Unit Drops. CHECK
+		-Code Unit Selection. CHECK
+		-Create Unit Structure. CHECK
+		-Create Unit Array. CHECK
+		-Create System to draw Units to Screen. CHECK
+		-Allow unit drops in certain area. CHECK
+		-Create Amorphous Blob limit and generation. CHECK
+		-Break. CHECK
+		-Create Unit Movement. (Pathfinding possibly. Yikes.) CHECK
+		-Add a Unselect Button. CHECK
+		-Create Enemies, and enemy fighting. ( Both you and enemy Take damage. exceptions with flying )
+		-Create enemy movement, and enemy Behavior. (AI, simple. no adaptation. add adaptation if time at end)
+		-Create tower attack. Add win condition. Allow for win. CHECK
+	-Polish:
+		-Polish AI.
+		-Animate Buttons.
+		-Animate Movement.
+		-Animate Attacks.
+		-Animate Deaths.
+
+Brainstorm:
+	-You are a space traveler who likes to turn planets into wierd amorphous blobs with a large ray beam. It is your art. ???
+		-Randomly Generated Planets. Randomly Generated Enemies. Arrive on planet. As fast as you can shift objects. Deal with enemies for conflict. ???
+		-This would be a 2D platformer. I imagine it as looking a little bit like Risk of Rain. 
+		-Possibly enjoyable because of it's difficulty.??? Difficulty stems from enemies being as powerful as you.
+		Pros:
+			-Neat Idea.
+			-Funny concept. ("This is my art.")
+			-Definitely Fun. 
+			-Platformers are easy.
+		Cons:
+			-Have to program AI. ( Could be very difficult )
+			-Have to program complete random generation system. ( This can just be scrapped )
+	
+	-You are a mage. You have a large collection of blob minions. ( Maybe it grows as you progress )
+		-You have skills you can use based on Mana or Cooldowns.
+		-These skills transforms your minions into things for certain amount of times. ( Defense or Offense based )
+		-Gameplay is strategy of how you spend your mana to adapt to enemy situations.
+		Style:
+			-I see this type of game as top down. Exploring a world ( The world moves with you )
+			-Blobs surround you.
+		Pros:
+			-Fun. 
+			-Good Concept.
+			-Mostly easy code. ( For the most part )
+		Cons:
+			-AI again. 
+			-Complex world and movement. ( How I see it currently, can definitely change )
+			
+	-You hold a base. You are against someone else (AI) with another base.( Blob Castle ) ( Amorphous Arena ) THIS IDEA IS CHOSEN.
+		-Your base can spawn various units.
+		-Limit units through mana. ( or something )
+		-You can control the units. ( Strategically )
+		-You do not have complete view of your enemy base. ( More like Starcraft, less like Clash Royale ) THIS DID NOT HAPPEN, not necessary tho, because map control takes a while.
+		-Units start as blobs.
+			-Shapeshift into unit of choice.
+		-Battle this way. Gain bonus mana through destroying enemy units.
+		-Your goal is to destroy the enemy base, by gaining mana advantage and overpowering the enemy.
+		Pros:
+			-Awesome Idea.
+			-Good practice in RTS style games.
+			-Easy map code. Easy movement code ( mouse select maybe )
+		Cons:
+			-Difficult AI coding. ( If implemented well, most time could be spent here ) DID NOT MAKE AI THAT ADAPTS. THEY JUST DO STUFF IN A LOOP.
+			-A little complicated ( Can be simplified )

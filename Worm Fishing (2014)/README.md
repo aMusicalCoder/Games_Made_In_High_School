@@ -1,0 +1,1 @@
+Move the src, and assets folder into a flashdevelop project destination. Then you can run the project and receive the swf file. I'll put an swf file into this repository as well.
