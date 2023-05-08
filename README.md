@@ -18,7 +18,7 @@ Chapman's Adventure:
 
 Swipe It! (2014-2015)
     
-    First iteration of a mobile-game I had worked on over multiple years.
+    First iteration of a mobile-game I had worked on over multiple years. Created with Action-Script 3.0 and the Starling Framework.
     You swipe across an arrow that appears on the screen in a random direction.
     Your goal is to get as many swipes as you can before the delay between your swipes becomes too long. 
 
